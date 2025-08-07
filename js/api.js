@@ -1,6 +1,6 @@
 class ApiService {
     constructor() {
-        this.baseUrl = 'http://localhost:5000/api/tmdb';
+        this.baseUrl = 'https://anime-backend-jdc9.onrender.com/api/tmdb';
         this.language = 'en-US';
     }
 
