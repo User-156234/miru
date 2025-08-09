@@ -20,5 +20,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "js/api.js", "js/router.js", "js/components.js", "js/main.js"]
+  "include": ["src", "src/js/api.js", "src/js/router.js", "src/js/components.js", "src/js/main.js"]
 }
