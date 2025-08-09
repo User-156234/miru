@@ -6,7 +6,7 @@
 /**
  * Create anime card component
  */
-function createAnimeCard(anime) {
+export function createAnimeCard(anime) {
     return `
         <div class="anime-card" onclick="router.navigate('/anime/${anime.id}')" data-anime-id="${anime.id}">
             <div class="anime-card-image">
@@ -32,7 +32,7 @@ function createAnimeCard(anime) {
 /**
  * Create episode card component
  */
-function createEpisodeCard(episode) {
+export function createEpisodeCard(episode) {
     return `
         <div class="episode-card" onclick="openVideoModal('${episode.title}', '${episode.videoUrl}')" data-episode-id="${episode.id}">
             <div class="episode-thumbnail">
@@ -50,7 +50,7 @@ function createEpisodeCard(episode) {
 /**
  * Create skeleton loading card
  */
-function createSkeletonCard() {
+export function createSkeletonCard() {
     return `
         <div class="skeleton-card">
             <div class="skeleton skeleton-image"></div>
@@ -66,7 +66,7 @@ function createSkeletonCard() {
 /**
  * Create loading grid
  */
-function createLoadingGrid(count = 12) {
+export function createLoadingGrid(count = 12) {
     const skeletons = Array.from({ length: count }, () => createSkeletonCard()).join('');
     return `
         <div class="anime-grid">
@@ -78,7 +78,7 @@ function createLoadingGrid(count = 12) {
 /**
  * Show loading overlay
  */
-function showLoading() {
+export function showLoading() {
     const loadingOverlay = document.getElementById('loadingOverlay');
     loadingOverlay.classList.add('active');
 }
@@ -86,7 +86,7 @@ function showLoading() {
 /**
  * Hide loading overlay
  */
-function hideLoading() {
+export function hideLoading() {
     const loadingOverlay = document.getElementById('loadingOverlay');
     loadingOverlay.classList.remove('active');
 }
@@ -94,7 +94,7 @@ function hideLoading() {
 /**
  * Show toast notification
  */
-function showToast(message, type = 'info') {
+export function showToast(message, type = 'info') {
     // Remove existing toast
     const existingToast = document.querySelector('.toast');
     if (existingToast) {
@@ -195,7 +195,7 @@ function showToast(message, type = 'info') {
 /**
  * Open video modal
  */
-function openVideoModal(title, videoUrl) {
+export function openVideoModal(title, videoUrl) {
     const modal = document.getElementById('videoModal');
     const videoPlayer = document.getElementById('videoPlayer');
     
@@ -223,7 +223,7 @@ function openVideoModal(title, videoUrl) {
 /**
  * Close video modal
  */
-function closeVideoModal() {
+export function closeVideoModal() {
     const modal = document.getElementById('videoModal');
     const videoPlayer = document.getElementById('videoPlayer');
     
@@ -235,7 +235,7 @@ function closeVideoModal() {
 /**
  * Initialize background particles
  */
-function initParticles() {
+export function initParticles() {
     const particlesContainer = document.getElementById('particles');
     const particleCount = 50;
     

@@ -1,3 +1,7 @@
+// in main.js or index.ts
+import { createLoadingGrid, createAnimeCard, createEpisodeCard, showToast, showLoading, hideLoading, openVideoModal, closeVideoModal } from './components.js';
+
+
 /**
  * Main Application Logic
  * Handles initialization, routing, and main functionality
